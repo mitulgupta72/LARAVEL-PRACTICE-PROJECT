@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\accessorsController;
+use App\Http\Controllers\joinController;
+use App\Http\Controllers\agreegateQueryController;
 use App\Http\Controllers\deleteController;
 use App\Http\Controllers\paginationController;
 use App\Http\Controllers\membersController;
@@ -133,7 +136,11 @@ Route::view('update','update');
 Route::get('querybuildercontroller',[queryBuilderController::class,'dbOperation']);
 Route::view('queryList','queryList');
 
+Route::get('agreegatequerycontroller',[agreegateQueryController::class,'operation']);
 
+Route::get('joincontroller',[joinController::class,'join']);
+
+Route::get('accessorscontroller',[accessorsController::class,'index']);
 
 
 
